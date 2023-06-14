@@ -3,39 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GPSP.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <VerticalStackLayout  Padding="10" Spacing="8">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <Frame BackgroundColor="#EFEFEF"
+                   CornerRadius="8"
+                   Padding="8"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="0,0,0,0"
+                   HorizontalOptions="Center"
+                   WidthRequest="300">
+            <VerticalStackLayout Spacing="8">
+                <Label
+                        Text="TRACKER APP"
+                        TextColor="DodgerBlue"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+        </Frame>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
+        <HorizontalStackLayout>
+            <RadioButton
+                x:Name="radioClient"
+                Content="Add Client"
+                FontAttributes="Bold"
+                CheckedChanged="radioClient_CheckedChanged"/>
+            <RadioButton
+                x:Name="radioMap"
+                Content="Open Map"
+                FontAttributes="Bold"
+                CheckedChanged="radioMap_CheckedChanged"/>
+            <!--<Button
+                x:Name="btnClient"
+                Text="Add Client"
+                FontAttributes="Bold"
+                Clicked="btnClient_Clicked"/>
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                x:Name="btnMap"
+                Text="Open Map"
+                FontAttributes="Bold"
+                Clicked="btnMap_Clicked"/>-->
+        </HorizontalStackLayout>
 
-        </VerticalStackLayout>
-    </ScrollView>
+
+
+        <ContentView x:Name="Container">
+        </ContentView>
+
+        
+        
+        
+    </VerticalStackLayout>
 
 </ContentPage>

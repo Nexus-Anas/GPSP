@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GPSP.ClientPage">
+    <VerticalStackLayout>
+
+
+        <Frame BackgroundColor="#EFEFEF"
+                   CornerRadius="8"
+                   Padding="8"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="0,0,0,0"
+                   HorizontalOptions="Center"
+                   WidthRequest="300">
+            <VerticalStackLayout Spacing="25">
+                
+                
+                <Label
+                    TextColor="DimGray"
+                    Text="ADD NEW CLIENT"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"/>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*">
+                        <Entry x:Name="txtFirstName" Placeholder="First name" Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*">
+                        <Entry x:Name="txtLastName" Placeholder="Last name" Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*">
+                        <Entry x:Name="txtPhone" Placeholder="Phone number" Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*">
+                        <Editor
+                            x:Name="txtAddress"
+                            FontSize="Medium"
+                            HeightRequest="100"
+                            Placeholder="Address"
+                            Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+
+
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Button
+                x:Name="btnSubmit"
+                Clicked="btnSubmit_Clicked"
+                Text="Submit"
+                FontAttributes="Bold"
+                WidthRequest="120"
+                BackgroundColor="DodgerBlue"/>
+                    <Button
+                x:Name="btnExit"
+                Clicked="btnExit_Clicked"
+                Text="Quit"
+                FontAttributes="Bold"
+                WidthRequest="120"
+                BackgroundColor="Crimson"/>
+                </HorizontalStackLayout>
+
+
+            </VerticalStackLayout>
+        </Frame>
+        
+        
+    </VerticalStackLayout>
+</ContentView>

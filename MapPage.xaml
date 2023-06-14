@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GPSP.MapPage">
+    <VerticalStackLayout Padding="5" Spacing="5">
+        <Entry
+            x:Name="txtSearch"
+            Placeholder="Search Location"
+            FontAttributes="Bold"
+            FontSize="Medium"/>
+        <Button
+            x:Name="btnSearch"
+            Text="Search"
+            FontAttributes="Bold"
+            Clicked="btnSearch_Clicked"
+            Margin="5,0,5,10"/>
+
+
+        <Frame x:Name="mapContainer" HeightRequest="450" BorderColor="Black" VerticalOptions="FillAndExpand">
+            <!-- Placeholder for the map control -->
+        </Frame>
+    </VerticalStackLayout>
+</ContentView>

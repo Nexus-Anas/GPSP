@@ -2,23 +2,34 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
 	public MainPage()
 	{
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+ //   private ContentView currentContentView;
+ //   private void btnClient_Clicked(object sender, EventArgs e)
+	//{
+ //       currentContentView = new ClientPage();
+ //       Container.Content = currentContentView;
+ //   }
+ //   private void btnMap_Clicked(object sender, EventArgs e)
+ //   {
+ //       currentContentView = new MapPage();
+ //       Container.Content = currentContentView;
+ //   }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+    private void radioClient_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+		if (radioClient.IsChecked)
+            Container.Content = new ClientPage();
+    }
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+    private void radioMap_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        if (radioMap.IsChecked)
+            Container.Content = new MapPage();
+    }
 }
 
