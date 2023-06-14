@@ -89,8 +89,9 @@ public partial class MapPage : ContentView
             {
                 Center = centerLocation,
                 Radius = new Distance(100),
-                StrokeColor = Colors.Red,
-                StrokeWidth = 2f
+                StrokeColor = Color.FromArgb("#88FF0000"),
+                StrokeWidth = 2f,
+                FillColor = Color.FromArgb("#88FFC0CB")
             };
 
             // Add the circle overlay to the map
